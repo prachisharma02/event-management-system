@@ -1,4 +1,4 @@
-const Vendor = require("../models/Vendor");
+const Vendor = require("../model/vendors");
 
 exports.createVendor = async (req, res) => {
   if (!req.body.name || !req.body.email) {

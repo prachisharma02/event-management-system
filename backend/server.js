@@ -16,13 +16,19 @@ connection.once("open", () => {
 });
 
 // const usersRouter = require("./routes/users");
-// const vendorsRouter = require("./routes/vendors");
+const vendorsRouter = require("./routes/vendors");
+const guestsRouter = require("./routes/guest");
+
 // const itemsRouter = require("./routes/items");
 // const ordersRouter = require("./routes/orders");
 // const transactionsRouter = require("./routes/transactions");
 
 // app.use("/users", usersRouter);
-// app.use("/vendors", vendorsRouter);
+app.use("/vendors", vendorsRouter);
+app.use("/api/guests", guestsRouter);
+// app.use("/api/admin/user", userRouter);
+// app.use("/api/vendor", vendorRouter);
+
 // app.use("/items", itemsRouter);
 // app.use("/orders", ordersRouter);
 // app.use("/transactions", transactionsRouter);
